@@ -4,7 +4,7 @@
 
 /* Importar la fuente Poppins de Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-@namespace prefix 'https://juaccardenasgom.github.io/grafica-interactiva';
+@namespace prefix 'https://juaccardenasgom.github.io/grafica-interactiva/';
 /* Variables para la paleta de colores, fuente y otros estilos de botones y sombras */
 :root {
   --purple: #581eaf;
@@ -186,7 +186,7 @@ section {
   background-repeat: no-repeat;
   background-position: center;
   background-blend-mode: screen;
-  background-image: url(/assets/hogwarts.jpg),
+  background-image: url(assets/hogwarts.jpg),
     radial-gradient(black, var(--purple));
 }
 
