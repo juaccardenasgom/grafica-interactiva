@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Configuración inicial del sitio por defecto, añadiendo la hoja de estilos, el título y el ícono del sitio -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hogwarts | History</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+  <!-- Se utiliza CSS Grid para la maquetación de la página y todas usan el mismo grid -->
+  <div class="grid">
+
+    <!-- Se ubica la barra de navegación con el logo en formato SVG -->
+    <header>
+      <a href="/index.html"><img class="logo" src="/assets/logo.svg" alt="Hogwarts"></a>
+      <nav>
+        <ul>
+          <li><a href="/pages/location.html">Location</a></li>
+          <li><a href="/pages/people.html">People</a></li>
+          <li><a href="/pages/activity.html">Activity</a></li>
+          <li><a href="/pages/history.html">History</a></li>
+          <li><a class="credits" href="/pages/credits.html"><button>Credits</button></a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Se ubica el sidebar que servirá para navegar el contenido por cada parte -->
+    <div class="sidebar">
+      <h3>Content</h3>
+      <ul>
+        <li><a href="#top">History</a></li>
+        <ul>
+          <li><a href="#p1">Foundation</a></li>
+          <li><a href="#p2">Construction</a></li>
+          <li><a href="#p3">Founders</a></li>
+          <li><a href="#p4">Salazar Slytherin’s Exit</a></li>
+          <li><a href="#p5">Ravenclaw's Tragedy</a></li>
+          <li><a href="#p6">Gryffindor’s Legacy</a></li>
+        </ul>
+      </ul>
+    </div>
+    
+    <!-- Se añade el articulo que tiene un título, y varios subtítulos donde se define como mínimo un párrafo y una imagen (con su caption) de manera opcional -->
+    <article>
+      <h1 id="top">History</h1>
+
+      <h2 id="p1">Foundation</h2>
+
+      <figure>
+        <img src="/assets/foundation.jpg" alt="Hogwarts Foundation">
+        <figcaption>Hogwarts Foundation</figcaption>
+      </figure>
+
+      <p>Hogwarts was founded by two wizards and two witches. At some point in the tenth century, four of the greatest
+        witches and wizards that ever lived founded Hogwarts School of Witchcraft and Wizardry. Their names were Godric
+        Gryffindor, Rowena Ravenclaw, Helga Hufflepuff and Salazar Slytherin. As The Sorting Hat told us, their reason
+        for doing so was because they had the ‘selfsame yearning, to make the world’s best magic school’, and once they
+        did, each created their own house to represent a personality and skill that they wanted to nurture. Gryffindor
+        students embodied bravery and chivalry; Ravenclaw, intelligence and wit; Hufflepuff, loyalty and fair play; and
+        Slytherin, the values of being sly and cunning.</p>
+
+      <p>It was built in Scotland, away from Muggle eyes. The tenth century was a dangerous time for witches and
+        wizards, who were being persecuted by Muggles hostile to magic. Therefore, Hogwarts was built somewhere in the
+        Scottish Highlands, and concealed with numerous charms and spells to make it impossible for Muggles to trespass.
+        For instead of an enormous school, any passing Muggle would only see ruins and signs warning them of danger.
+      </p>
+
+      <h2 id="p2">Construction</h2>
+
+      <p>The castle itself was huge and complex. Hogwarts has a long history of ancient magic, and Albus Dumbledore
+        admitted that not even he knew all of its secrets. Indeed, much about the design and construction of Hogwarts
+        remains a mystery. Did the founders implement the Anti-Disapparition Jinx? Where did the Room of Requirement
+        come from? Why did they build a school next to a dark and dangerous forest?</p>
+
+      <figure>
+        <img src="/assets/stairs.jpg" alt="Hogwarts stairs">
+        <figcaption>Hogwarts stairs</figcaption>
+      </figure>
+
+      <h2 id="p3">Founders</h2>
+
+      <p>The founders were friends, but fell out over what Hogwarts should be. Much like the Marauders, or Harry,
+        Hermione and Ron, the founders of Hogwarts were originally friends. Yet that changed once it became clear that
+        certain founders had a very different idea of what they wanted Hogwarts to be. That founder, of course, was
+        Salazar Slytherin, who distrusted Muggle-born wizards, and believed that only ‘pure-blood’ students should be
+        allowed to attend Hogwarts. The other founders disagreed – especially Godric Gryffindor, who was, up until then,
+        Slytherin’s greatest friend. Their argument – possibly, it’s suggested, a duel – resulted in Slytherin leaving
+        the school behind.</p>
+
+      <h2 id="p4">Salazar Slytherin's Exit</h2>
+
+      <figure>
+        <img src="/assets/slytherin.jpg" alt="Chamber of secrets">
+        <figcaption>Chamber of secrets</figcaption>
+      </figure>
+
+      <p>Salazar Slytherin left, but not before he built the Chamber of Secrets. The story goes that the hidden chamber
+        was kept secret from the other founders, and was sealed until Slytherin’s ‘true heir’ arrived at the school: a
+        student who would be able to unseal the Chamber of Secrets and unleash the Basilisk inside, a huge snake that
+        would purge the school of Muggle-born wizards. Now that is a grudge</p>
+
+      <h2 id="p5">Ravenclaw's Tragedy</h2>
+
+      <figure>
+        <img src="/assets/ravenclaw.jpg" alt="Rowena Ravenclaw's diagem">
+        <figcaption>Rowena Ravenclaw's diagem</figcaption>
+      </figure>
+
+      <p>Tragedy also followed Rowena Ravenclaw. Rowena Ravenclaw was the greatest witch of her time; a figure famed for
+        her intelligence and wit – and that was before she wore her enchanted diadem, which was said to enhance the
+        wisdom of the wearer. Such a witch casts a long shadow, one her daughter Helena found it difficult to escape
+        from. Envying her mother’s status and power, she betrayed her by stealing the diadem – believing it could make
+        her powerful – and ran away from Hogwarts. The betrayal embarrassed Rowena, who told no one, including her
+        fellow founders, that the diadem was missing.</p>
+
+      <p>On her death bed, she sent a young man to find Helena, so she could see her daughter for one last time. That
+        young man, who had long been infatuated with Helena, tracked her down to a forest in Albania... but ending up
+        killing her when she rejected his advances. His real name is unknown, but you’ll recognise him by his
+        post-mortem moniker, the Bloody Baron.</p>
+
+      <h2 id="p6">Gryffindor’s Legacy</h2>
+
+      <p>Godric Gryffindor favoured the virtues of courage and heroism, and has been described by J.K. Rowling as ‘the
+        best duellist of his time’ — both with a wand, and a sword. Thus his legacy lives on with the Sword of
+        Gryffindor, the relic that Harry Potter used to destroy Horcruxes. But he also endures through another object.
+        You see, when the founders became older, they were faced with a problem: how would they ensure that students
+        were sorted into the right House after they were gone? For up until that point, that decision was made by them
+        and them alone. The solution? Godric’s hat. The founders decided that the best course of action was for Godric
+        to take off his hat so that all four of them could enchant it to sort students long after their deaths. And lo,
+        the Sorting Hat was born.</p>
+
+      <figure>
+        <img src="/assets/gryffindor.png" alt="The Sorting Hat">
+        <figcaption>The Sorting Hat</figcaption>
+      </figure>
+
+      <!-- Se añade un botón para volver al inicio del artículo -->
+      <a href="#top">
+        <button id="back">Back to top</button>
+      </a>
+    </article>
+
+    <!-- Se ubica el pie de página para dar información sobre el autor, el curso y el año -->
+    <footer>
+      &copy; Juan Camilo Cárdenas Gómez — Gráfica interactiva — 2021
+    </footer>
+
+    <!-- Se añade un botón para ir a la siguiente página dentro del flujo narrativo del sitio -->
+    <a href="/pages/credits.html"><button id="next">→</button></a>
+  </div>
+</body>
+
+</html>
