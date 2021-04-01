@@ -1,0 +1,349 @@
+/* Hoja de estilos para todas las páginas, ¡Se utilizó CSS Grid y Flexbox! */
+
+/* Inicialización */
+
+/* Importar la fuente Poppins de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* Variables para la paleta de colores, fuente y otros estilos de botones y sombras */
+:root {
+  --purple: #581eaf;
+  --blue: #5498d3;
+  --green: #83b184;
+  --yellow: #f0d06b;
+  --dark: #1e2019;
+  --lightdark: #2b2e24;
+  --font: 'Poppins', sans-serif;
+  --button-radius: 0.5rem;
+  --shadow: 0 0 #000, 0 0 #000, 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Estilos generales */
+
+/* Configuración inicial de todos los elementos, se usa para estandarizar la fuente */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: var(--font);
+}
+
+/* Configuración inicial del body que ocupe todo el alto de la pantalla */
+body {
+  margin: 0;
+  height: 100vh;
+}
+
+/* Configuración de la barra de navegación, se añaden sombras y se le da un color de fondo oscuro*/
+header {
+  display: flex;
+  padding: 0 15vw;
+  box-shadow: var(--shadow);
+  background-color: var(--dark);
+  justify-content: space-between;
+  border-radius: 0 0 0.25rem 0.25rem;
+}
+
+/* Cambiar el estilo general de los botones */
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0.45rem 1.5rem;
+  box-shadow: var(--shadow);
+  border-radius: var(--button-radius);
+}
+
+/* Configuración del grid para todas las páginas (MUY importante para toda la maquetación del sitio) */
+.grid {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  overflow: hidden;
+  grid-template-rows: 8vh 90vh 2vh;
+  grid-template-columns: 15vw 85vw;
+  grid-template-areas:
+    'header header'
+    'sidebar article'
+    'footer footer';
+}
+
+/* Ubicación del header en el grid */
+header {
+  grid-area: header;
+}
+
+/* Ubicación del sidebar en el grid */
+.sidebar {
+  grid-area: sidebar;
+}
+
+/* Ubicación del artículo en el grid */
+article {
+  grid-area: article;
+}
+
+/* Ubicación del footer en el grid */
+footer {
+  grid-area: footer;
+}
+
+/* Eliminar la decoración de los links de la barra de navegación */
+nav a {
+  text-decoration: none;
+}
+
+/* Cambiar el estilo de los links de la barra de navegación */
+nav a,
+nav button {
+  color: white;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+/* Hacer que apareca el cursor sobre el logo 'Hogwarts' */
+.logo {
+  cursor: pointer;
+  /* width: 100%; */
+}
+
+/* Eliminar el padding por defecto para la barra de navegación */
+header ul {
+  padding: 0;
+}
+
+/* Alinear los elementos del header en el centro del eje vertical */
+header a,
+nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* Cambiar alineación de las páginas todas en el mismo eje horizontal */
+nav li {
+  padding: 0 1rem;
+  display: inline-flex;
+}
+
+/* Añadir efectos sobre los links de la barra de navegación */
+nav a {
+  transition: all 0.3s ease 0s;
+}
+
+nav a:hover {
+  color: var(--yellow);
+}
+
+/* Cambiar el estilo del botón de créditos en la barra de navegación */
+nav button {
+  color: transparent;
+  transition: all 0.2s ease 0s;
+  background-color: var(--yellow);
+}
+
+/* Añadir efecto sobre los créditos */
+nav button:hover {
+  color: white;
+  background-color: var(--background);
+}
+
+/* Estilos del footer */
+footer {
+  display: flex;
+  color: white;
+  font-size: 0.75rem;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--dark);
+}
+
+/* Estilos para el scrollbar cuando el contenido sea más extenso */
+*::-webkit-scrollbar {
+  width: 5px;
+  background-color: var(--yellow);
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 0.1rem;
+  background-color: var(--lightdark);
+}
+
+/* Estilos del landing */
+
+/* Se añada un fondo, además de aplicarle un gradiente circular que aplica un efecto sobre este */
+section {
+  display: flex;
+  color: white;
+  font-size: 3.5rem;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  grid-area: 2 / 1 / 3 / 3;
+  background-color: var(--dark);
+  background-size: 100vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: screen;
+  background-image: url(/assets/hogwarts.jpg),
+    radial-gradient(black, var(--purple));
+}
+
+/* Añadir un padding al título del landing y que respete el que se puso en el header */
+section h1 {
+  padding: 0 18vw;
+}
+
+/* Estilos del botón */
+#tour {
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--dark);
+  margin-top: 2.5rem;
+  padding: 1rem 2rem;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease 0s;
+  background-color: var(--yellow);
+}
+
+/* Añadir efectos al botón */
+#tour:hover {
+  color: white;
+  font-weight: initial;
+  background-color: var(--dark);
+}
+
+/* Estilos de todas las demás páginas */
+
+/* Configuración del sidebar */
+.sidebar {
+  padding-left: 1rem;
+  padding-top: 1.69vh;
+  box-shadow: var(--shadow);
+  margin: 0.4vh 0.1vw 0.5vh 0;
+  background-color: var(--dark);
+  border-radius: 0 0.75rem 0.75rem 0;
+}
+
+/* Configuración del título */
+.sidebar h3 {
+  margin-top: 26px;
+  font-size: 26px;
+  font-weight: 500;
+  padding-left: 8px;
+  color: var(--yellow);
+}
+
+/* Configuración de los links */
+.sidebar a {
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.3s ease 0s;
+}
+
+/* Configuración de la lista */
+.sidebar ul {
+  list-style: none;
+  padding: 0 1rem 0 0.5rem;
+}
+
+/* Configuración de cada elemento */
+.sidebar li {
+  transition: all 0.3s ease 0s;
+}
+
+/* Añadir efectos sobre los elementos del sidebar */
+.sidebar li:hover {
+  padding-left: 5px;
+  background-color: var(--lightdark);
+  border-left: 3px solid var(--yellow);
+}
+
+/* Estilos del artículo */
+
+/* Hacer que el el contenido sea scrolleable dependiendo de la altura del artículo */
+article {
+  overflow-y: auto;
+  padding: 1.69vh 15vw 0 5vw;
+  margin: 0.4vh 0.1vw 0.5vh 0;
+}
+
+/* Configuración del título */
+article h1 {
+  font-size: 36px;
+  margin-top: 26px;
+}
+
+/* Configuración del párrafo */
+article p {
+  text-align: justify;
+}
+
+/* Configuración de los links */
+article a {
+  text-decoration: none;
+  color: var(--purple);
+}
+
+/* Configuración de las imágenes */
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Que las imágenes no ocupen más del 45% del ancho de la pantalla */
+figure img {
+  max-width: 45vw;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow);
+}
+
+/* Estilos del caption de las imágenes */
+figcaption {
+  font-size: 14px;
+  margin-top: 1rem;
+}
+
+/* Estilos sobre el botón para volver al inicio del artículo */
+#back {
+  top: 94vh;
+  box-shadow: none;
+  position: absolute;
+  color: var(--lightdark);
+  box-shadow: var(--shadow);
+  left: calc(100vw - 15vw);
+  transition: all 0.3s ease 0s;
+  background-color: transparent;
+}
+
+/* Añadir efectos sobre el botón de volver al inicio */
+#back:hover {
+  color: white;
+  background-color: var(--dark);
+}
+
+/* Estilos para ir a la siguiente página ubicado en toda la derecha del artículo */
+#next {
+  top: 51vh;
+  left: 96vw;
+  width: 4vw;
+  height: 4vh;
+  border-radius: 0;
+  position: absolute;
+  background-color: transparent;
+  box-shadow: none;
+  transition: all 0.3s ease-out 0s;
+}
+
+/* Efectos sobre esta sección para mejorar la experiencia */
+#next:hover {
+  top: 7.5vh;
+  height: 91vh;
+  color: white;
+  background-color: var(--dark);
+}
