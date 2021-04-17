@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Configuración inicial del sitio por defecto, añadiendo la hoja de estilos, el título y el ícono del sitio -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hogwarts | Activity</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Se utiliza CSS Grid para la maquetación de la página y todas usan el mismo grid -->
+  <div class="grid">
+
+    <!-- Se ubica la barra de navegación con el logo en formato SVG -->
+    <header>
+      <a href="index.html"><img class="logo" src="assets/logo.svg" alt="Hogwarts"></a>
+      <input type="checkbox" id="hamburger"class="hamburger">
+      <nav>
+        <ul>
+          <li><a href="location.html">Location</a></li>
+          <li><a href="people.html">People</a></li>
+          <li><a href="activity.html">Activity</a></li>
+          <li><a href="history.html">History</a></li>
+          <li><a class="credits" href="credits.html"><button>Credits</button></a></li>
+        </ul>
+      </nav>
+      <label for="hamburger">
+        <span></span>
+      </label>
+    </header>
+
+    <!-- Se ubica el sidebar que servirá para navegar el contenido por cada parte -->
+    <div class="sidebar">
+      <h3>Content</h3>
+      <ul>
+        <li><a href="activity.html#top">Activity</a></li>
+        <ul>
+          <li><a href="activity.html#p1">Triwizard Tournament</a></li>
+          <li><a href="activity.html#p2">Inter-House Quidditch Cup</a></li>
+          <li><a href="activity.html#p3">Sorting ceremony</a></li>
+          <li><a href="activity.html#p4">Hogsmeade</a></li>
+        </ul>
+      </ul>
+    </div>
+
+    <!-- Se añade el articulo que tiene un título, y varios subtítulos donde se define como mínimo un párrafo y una imagen (con su caption) de manera opcional -->
+    <article>
+      <h1 id="top">Activity</h1>
+
+      <h2 id="p1">Triwizard Tournament</h2>
+
+      <figure>
+        <img src="assets/triwizard.jpg" alt="Triwizard Tournament">
+        <figcaption>First task of the tournament</figcaption>
+      </figure>
+
+      <p>The Triwizard Tournament was first established some seven hundred years ago as a friendly competition between
+        the three largest European schools of wizardry: Hogwarts, Beauxbatons, and Durmstrang. A champion was selected
+        to represent each school, and the three champions competed in three magical tasks. The schools took it in turns
+        to host the tournament once every five years, and it was generally agreed to be a most excellent way of
+        establishing ties between young witches and wizards of different nationalities — until, that is, the death toll
+        mounted so high that the tournament was discontinued.</p>
+
+      <h2 id="p2">Inter-House Quidditch Cup</h2>
+
+      <figure>
+        <img src="assets/quidditch.jpg" alt="Quidditch Cup">
+        <figcaption>Quidditch Cup</figcaption>
+      </figure>
+
+      <p>The Championship takes the form of a mini-league, with each house team playing each other throughout the course
+        of the year. This results in three games for each team, and six games of Quidditch for the school to enjoy
+        overall. As there is such a small number of games, each one is eagerly anticipated and usually attended by the
+        entire school, including the teachers. When it comes to Quidditch some of the Professors lose their normal calm
+        demeanour and become as excited about the result as the students. Commentary is provided on each game.</p>
+
+      <h2 id="p3">Sorting ceremony</h2>
+
+      <figure>
+        <img src="assets/sorting.jpg" alt="Sorting ceremony">
+        <figcaption>Sorting ceremony</figcaption>
+      </figure>
+
+      <p>The start-of-term banquet will begin shortly, but before you take your seats in the Great Hall, you will be
+        sorted into your houses. The Sorting is a very important ceremony because, while you are here, your house will
+        be something like your family within Hogwarts.</p>
+
+      <h2 id="p4">Hogsmeade</h2>
+
+      <figure>
+        <img src="assets/hogsmade.png" alt="Hogsmeade">
+        <figcaption>Hogsmeade in winter</figcaption>
+      </figure>
+
+      <p>Hogsmeade Village, or simply called Hogsmeade, was the only all-wizarding village in Britain. It was founded by
+        Hengist of Woodcroft. Since before 1714 (when the 1714 Edict was passed), Hogwarts third years and above had
+        been permitted weekend trips into the village.
+
+        Mainly, students frequented the High Street in the village, which contained the named speciality shops and pubs
+        such as Zonko's Joke Shop and Honeydukes. Otherwise, they wandered on to observe the infamous Shrieking Shack.
+      </p>
+
+      <!-- Se añade un botón para volver al inicio del artículo -->
+      <a href="#top">
+        <button id="back">Back to top</button>
+      </a>
+    </article>
+
+    <!-- Se ubica el pie de página para dar información sobre el autor, el curso y el año -->
+    <footer>
+      &copy; Juan Camilo Cárdenas Gómez — Gráfica interactiva — 2021
+    </footer>
+
+    <!-- Se añade un botón para ir a la siguiente página dentro del flujo narrativo del sitio -->
+    <a href="history.html"><button id="next">→</button></a>
+  </div>
+</body>
+
+</html>

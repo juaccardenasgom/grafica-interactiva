@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Configuración inicial del sitio por defecto, añadiendo la hoja de estilos, el título y el ícono del sitio -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hogwarts | Location</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Se utiliza CSS Grid para la maquetación de la página y todas usan el mismo grid -->
+  <div class="grid">
+
+    <!-- Se ubica la barra de navegación con el logo en formato SVG -->
+    <header>
+      <a href="index.html"><img class="logo" src="assets/logo.svg" alt="Hogwarts"></a>
+      <input type="checkbox" id="hamburger"class="hamburger">
+      <nav>
+        <ul>
+          <li><a href="location.html">Location</a></li>
+          <li><a href="people.html">People</a></li>
+          <li><a href="activity.html">Activity</a></li>
+          <li><a href="history.html">History</a></li>
+          <li><a class="credits" href="credits.html"><button>Credits</button></a></li>
+        </ul>
+      </nav>
+      <label for="hamburger">
+        <span></span>
+      </label>
+    </header>
+
+    <!-- Se ubica el sidebar que servirá para navegar el contenido por cada parte -->
+    <div class="sidebar">
+      <h3>Content</h3>
+      <ul>
+        <li><a href="location.html#top">Location</a></li>
+        <ul>
+          <li><a href="location.html#p1">Hiding place of the Philosopher's Stone</a></li>
+          <li><a href="location.html#p2">Chamber of Secrets</a></li>
+          <li><a href="location.html#p3">Room of Requirement</a></li>
+          <li><a href="location.html#p4">Forbidden Forest</a></li>
+          <li><a href="location.html#p5">Hogwarts Express</a></li>
+        </ul>
+      </ul>
+    </div>
+    
+    <!-- Se añade el articulo que tiene un título, y varios subtítulos donde se define como mínimo un párrafo y una imagen (con su caption) de manera opcional -->
+    <article>
+      <h1 id="top">Location</h1>
+
+      <p>Hogwarts is located in the Highlands in the north of Scotland. The school is protected by numerous
+        charms and spells that make it possible for a Muggle to locate. Instead, Muggles only see ruins with
+        danger warnings.</p>
+
+      <figure>
+        <img src="assets/map.jpg" alt="Hogwarts map">
+        <figcaption>Hogwarts map</figcaption>
+      </figure>
+
+      <p><b><a href="https://en.wikipedia.org/wiki/J._K._Rowling" title="J. K. Rowling" target="_blank">J. K.
+            Rowling</a></b> says she visualises Hogwarts, in its entirety, to be:</p>
+
+      <blockquote>
+        A huge, rambling, quite scary-looking castle, with a jumble of towers and battlements. Like the Weasleys' house,
+        it isn't a building that Muggles could build, because it is supported by magic.
+      </blockquote>
+
+      <figure>
+        <img src="assets/castle.jpg" alt="Castle">
+        <figcaption>Hogwarts Castle</caption>
+      </figure>
+
+      <p>The school is depicted as having <b>numerous charms and spells on and around it</b> that make it impossible for
+        a Muggle to locate it. Muggles cannot see the school; rather, they see only ruins and several warnings of
+        danger. The castle's setting is described as having extensive grounds with sloping lawns, flowerbeds and
+        vegetable patches, a loch (called The Black Lake), a large dense forest (called the Forbidden Forest), several
+        greenhouses and other outbuildings, and a full-size Quidditch pitch. There is also an owlery, which houses all
+        the owls owned by the school and those owned by students. Some rooms in the school tend to "move around", and so
+        do the stairs in the grand staircase.</p>
+
+      <h2 id="p1">Hiding place of the Philosopher's Stone</h2>
+
+      <p>Accessed by entering a trapdoor in the forbidden corridor on the third floor, and protected by a gauntlet of
+        seven magical challenges set up by the teachers.</p>
+
+      <figure>
+        <img src="assets/stone.png" alt="Hiding place of the Philosopher's Stone">
+        <figcaption>Philosopher's Stone chamber</figcaption>
+      </figure>
+
+      <ul>
+        <li>A giant three-headed dog named Fluffy placed specially to guard the trapdoor by Hagrid.</li>
+        <li>Devil's Snare, grown by Professor Sprout.</li>
+        <li>A room containing dozens of keys, charmed by Flitwick to sprout wings and fly near the ceiling. One of these
+          keys will unlock the door to the next section. However, in the film adaptation, the keys attack the seeker of
+          the Stone.</li>
+        <li>A large chessboard with an army of large chessmen, transfigured by McGonagall. To continue to the door on
+          the opposite side, the person in question must beat the chessmen at a game of wizards' chess where the player
+          must risk his life if he loses. Ron and Professor Quirrell are the only wizards to win the game of wizards'
+          chess.</li>
+        <li>A room with a large troll inside. This is Quirrell's challenge. In the book, Quirrell had knocked out his
+          own troll to get to the last room and thus the trio did not have to fight it; in the film, it does not appear,
+          but it appears in the PS1 and Game Boy Color version of the game.</li>
+        <li>A series of potions, brewed by Snape. A logical riddle, not magic, has to be solved. There are two doors,
+          blocked by fire. One potion will allow the person to exit the way he or she arrived, another will allow him or
+          her to continue to the next chamber, two are nettle wine, and the other three are poison. This challenge does
+          not appear in the film, but does in the video game adaptation.</li>
+      </ul>
+
+      <h2 id="p2">Chamber of Secrets</h2>
+
+      <p>The Chamber of Secrets, which is deep under the school (most likely under the lake), was home to an ancient
+        Basilisk, intended to be used to purge the school of Muggle-born students. Salazar Slytherin, one of the
+        founders of Hogwarts, built the Chamber before he left the school.</p>
+
+      <figure>
+        <img src="assets/chamber.jpg" alt="Chamber of Secrets">
+        <figcaption>Chamber of Secrets</figcaption>
+      </figure>
+
+      <p>The entrance to the Chamber is hidden in Moaning Myrtle's bathroom on the second floor. One of the sink taps
+        has a snake scratched into its side; when a command in Parseltongue is spoken, it opens to reveal the mouth of a
+        dark, slimy chute, wide enough to slide down, that gives onto a stone tunnel. There are many skeletons of small
+        animals littering the floor and even a gigantic skin shed by the Basilisk. The tunnel leads to a solid wall,
+        carved with two entwined serpents with emeralds for eyes. At a command in Parseltongue, the wall opens to
+        expose a long, dim corridor, lined with monumental statues of snakes, including two rows of towering stone
+        pillars with more carved serpents that brace the ceiling. A colossal statue of Salazar Slytherin, looking
+        ancient and monkey-like, is at the centre. The Basilisk rested inside the statue and emerged from its mouth when
+        the Heir of Slytherin, Tom Riddle, summoned it.</p>
+
+      <h2 id="p3">Room of Requirement</h2>
+
+      <p>On the seventh floor opposite an enormous tapestry depicting Barnabas the Barmy attempting to train trolls for
+        the ballet, the Room of Requirement appears only when someone is in need of it. To make it appear, one must walk
+        past its hidden entrance three times while concentrating on what is needed. The room will then appear, outfitted
+        with whatever is required. To the Hogwarts house-elves, it is also known as the Come and Go Room.</p>
+
+      <figure>
+        <img src="assets/room.jpg" alt="Room of Requirement">
+        <figcaption>Room of Requirement</figcaption>
+      </figure>
+
+      <p>Harry learns of the room's abilities from Dobby in Order of the Phoenix, finding it the perfect location for
+        his Dumbledore's Army meetings, during which it is filled with bookcases full of Defence Against the Dark Arts
+        volumes, many different kinds of Dark Detectors, and a plethora of floor cushions for practising defensive
+        spells. When the D.A. is betrayed, the room is left open, and Pansy Parkinson is able to retrieve the list of
+        members of the organisation. In Half-Blood Prince Harry uses the Room of Hidden Things to stash his copy of
+        Advanced Potion-Making, describing it as the size of a large cathedral and packed to overflowing with items
+        hidden by Hogwarts inhabitants over the years, such as old potions, clothing, ruined furniture, an old tiara
+        (which happens to be one of Voldemort's Horcruxes), or books which are "no doubt banned or graffitied or
+        stolen." He later realises that Draco has been using the room in this state to hide and repair the Vanishing
+        Cabinet to use it to smuggle Death Eaters into Hogwarts. Ironically, while Harry tries many times to get into
+        the Room of Requirement to see what Draco is doing, the only time he succeeds to get into the room (and he is
+        not thinking about Draco), he gains access to the room where Malfoy has been working.</p>
+
+      <h2 id="p4">Forbidden Forest</h2>
+
+      <p>The Forbidden Forest is a large, dark enchanted forest in the boundaries of the school grounds. It is usually
+        referred to simply as "the Forest" and in the film series as the "Dark Forest". It is strictly forbidden to all
+        students, except during Care of Magical Creatures lessons and, on rare occasions, detentions.</p>
+
+      <figure>
+        <img src="assets/forest.jpg" alt="Forbidden Forest">
+        <figcaption>Forbidden Forest</figcaption>
+      </figure>
+
+      <p>Among the plant species within the Forest are trees such as beech, oak, pine, sycamore, yew and knotgrass and
+        thorn undergrowth. Though the Forest is vastly dense and wild, there are a few paths and clearings. Hagrid, who
+        frequently travels into the Forest for various reasons, mostly makes these trails. The Forest is also home to an
+        assortment of creatures, many of them dangerous.</p>
+
+      <h2 id="p5">Hogwarts Express</h2>
+
+      <p>
+        <b>The Hogwarts Express</b> is a train that carries students non-stop from Platform ​9 &frac34; at King's Cross
+        station in
+        London to Hogsmeade Station, near Hogwarts. Prefects of the school ride in a separate carriage near the front of
+        the train. The compartments on the train appear to be lettered; in Half-Blood Prince, the "Slug Club" meets in
+        compartment C.
+      </p>
+
+      <figure>
+        <img src="assets/express.jpg" alt="Hogwarts Express">
+        <figcaption>Hogwarts Express</figcaption>
+      </figure>
+
+      <!-- Se añade un botón para volver al inicio del artículo -->
+      <a href="#top">
+        <button id="back">Back to top</button>
+      </a>
+    </article>
+
+    <!-- Se ubica el pie de página para dar información sobre el autor, el curso y el año -->
+    <footer>
+      &copy; Juan Camilo Cárdenas Gómez — Gráfica interactiva — 2021
+    </footer>
+
+    <!-- Se añade un botón para ir a la siguiente página dentro del flujo narrativo del sitio -->
+    <a href="people.html"><button id="next">→</button></a>
+  </div>
+</body>
+
+</html>

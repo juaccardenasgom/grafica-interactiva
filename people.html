@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Configuración inicial del sitio por defecto, añadiendo la hoja de estilos, el título y el ícono del sitio -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hogwarts | People</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Se utiliza CSS Grid para la maquetación de la página y todas usan el mismo grid -->
+  <div class="grid">
+
+    <!-- Se ubica la barra de navegación con el logo en formato SVG -->
+    <header>
+      <a href="index.html"><img class="logo" src="assets/logo.svg" alt="Hogwarts"></a>
+      <input type="checkbox" id="hamburger"class="hamburger">
+      <nav>
+        <ul>
+          <li><a href="location.html">Location</a></li>
+          <li><a href="people.html">People</a></li>
+          <li><a href="activity.html">Activity</a></li>
+          <li><a href="history.html">History</a></li>
+          <li><a class="credits" href="credits.html"><button>Credits</button></a></li>
+        </ul>
+      </nav>
+      <label for="hamburger">
+        <span></span>
+      </label>
+    </header>
+
+    <!-- Se ubica el sidebar que servirá para navegar el contenido por cada parte -->
+    <div class="sidebar">
+      <h3>Content</h3>
+      <ul>
+        <li><a href="people.html#top">People</a></li>
+        <ul>
+          <li><a href="people.html#p1">Albus Dumbledore</a></li>
+          <li><a href="people.html#p2">Severus Snape</a></li>
+          <li><a href="people.html#p3">Rubeus Hagrid</a></li>
+          <li><a href="people.html#p4">Harry Potter</a></li>
+          <li><a href="people.html#p5">Hermione Granger</a></li>
+          <li><a href="people.html#p6">Ron Weasley</a></li>
+        </ul>
+      </ul>
+    </div>
+
+    <!-- Se añade el articulo que tiene un título, y varios subtítulos donde se define como mínimo un párrafo y una imagen (con su caption) de manera opcional -->
+    <article>
+      <h1 id="top">People</h1>
+
+      <p>Here's some remarkable characters that have spent more of ther lifetime in this castle. Take a good look
+        because some of them are really good at witchcraft and witchery. And don't fool yourself, every one of these
+        people is quite the character!</p>
+
+      <h2 id="p1">Albus Dumbledore</h2>
+
+      <figure>
+        <img src="assets/dumbledore.jpg" alt="Albus Dumbledore">
+        <figcaption>Albus Dumbledore</figcaption>
+      </figure>
+
+      <p>Rowling has stated that she enjoys writing Dumbledore because he "is the epitome of goodness." She said that
+        Dumbledore speaks for her, as he "knows pretty much everything" about the Harry Potter universe. Rowling
+        mentioned that Dumbledore regrets "that he has always had to be the one who knew, and who had the burden of
+        knowing. And he would rather not know." As a mentor to the central character Harry Potter, "Dumbledore is a very
+        wise man who knows that Harry is going to have to learn a few hard lessons to prepare him for what may be coming
+        in his life. He allows Harry to get into what he wouldn't allow another pupil to do, and he also unwillingly
+        permits Harry to confront things he’d rather protect him from." In a 1999 interview, Rowling stated that she
+        imagined Dumbledore "more as a John Gielgud type, you know, quite elderly and – and quite stately." During his
+        time as a student, Dumbledore was in Gryffindor House. Rowling said in an interview that Dumbledore was about
+        150 years old. However, on her website, she states that Dumbledore was born in 1881, making him either 115 or
+        116 at the time of his death.</p>
+
+      <h2 id="p2">Severus Snape</h2>
+
+      <figure>
+        <img src="assets/snape.png" alt="Severus Snape">
+        <figcaption>Severus Snape</figcaption>
+      </figure>
+
+      <p>In an interview, Rowling described Snape's character as an "antihero". She has said that she drew
+        inspiration for Snape's character from a disliked teacher from her own childhood, and described Snape as a
+        horrible teacher, saying the "worst, shabbiest thing you can do as a teacher is to bully students."
+        However, she does suggest in the books that he is generally an effective teacher. Although Rowling has said
+        that Gilderoy Lockhart is her only character that she "deliberately based on a real person", Snape was
+        reportedly based, at least in part, on John Nettleship, who taught Rowling chemistry and employed her mother as
+        an assistant at Wyedean School near Chepstow. Rowling based Snape's given name on "Severus Road" in
+        Clapham, and his surname is borrowed from the name of a village in England. In a 1999 interview and
+        again in 2004, Rowling singled out Snape as one of her favourite characters to write.</p>
+
+      <h2 id="p3">Rubeus Hagrid</h2>
+
+      <figure>
+        <img src="assets/hagrid.jpg" alt="Rubeus Hagrid">
+        <figcaption>Rubeus Hagrid</figcaption>
+      </figure>
+
+      <p>Hagrid was among the characters that Rowling says she created on "the very first day". She has explained the
+        source of his name as "another old English word, meaning – if you were hagrid – it’s a dialect word – you’d had
+        a bad night. Hagrid is a big drinker – he has a lot of bad nights." His first name, Rubeus, was named after red
+        in Latin to reflect alchemy and his paternal contrast to Albus Dumbledore: his "passion" to Dumbledore's
+        "asceticism". In her article "Harry’s Fame", Rosemary Goring notes the Forest of Dean is an influence on
+        Rowling’s work, and Hagrid is the only character that is "directly drawn from the Forest of Dean". According to
+        Goring, Hagrid’s "dropped word-endings are a Chepstow speciality." She also claims that Hagrid is physically
+        "modeled on the Welsh chapter of Hells Angels who’d swoop down on the town and hog the bar, 'huge mountains of
+        leather and hair".</p>
+
+      <h2 id="p4">Harry Potter</h2>
+
+      <figure>
+        <img src="assets/harry.png" alt="Harry Potter">
+        <figcaption>Harry Potter</figcaption>
+      </figure>
+
+      <p>According to Rowling, the idea for both the Harry Potter books and its eponymous character came while waiting
+        for a delayed train from Manchester, England to London in 1990. She stated that the idea of "this scrawny,
+        black-haired, bespectacled boy who didn't know he was a wizard became more and more real to me". While
+        developing the ideas for her book, she also decided to make Harry an orphan who attended a boarding school
+        called Hogwarts. She explained in a 1999 interview with The Guardian: "Harry had to be an orphan—so that he's a
+        free agent, with no fear of letting down his parents, disappointing them ... Hogwarts has to be a boarding
+        school—half the important stuff happens at night! Then there's the security. Having a child of my own reinforces
+        my belief that children above all want security, and that's what Hogwarts offers Harry."</p>
+
+      <h2 id="p5">Hermione Granger</h2>
+
+      <figure>
+        <img src="assets/hermione.png" alt="Hermione Granger">
+        <figcaption>Hermione Granger</figcaption>
+      </figure>
+
+      <p>Hermione Jean Granger is a Muggle-born Gryffindor, who becomes best friends with Harry Potter and Ron
+        Weasley. J.K. Rowling states that she was born on 19 September 1979 and she was nearly twelve when she first
+        attended Hogwarts. She is an overachiever who excels academically and is described by J.K. Rowling as a "very
+        logical, upright and good" character. J.K. Rowling adds that Hermione's parents, two Muggle dentists, are a
+        bit bemused by their odd daughter but "very proud of her all the same." They are well aware of the wizarding
+        world and have visited Diagon Alley with her. Hermione was originally intended to have a sister, but the planned
+        sibling did not make an appearance in the first Harry Potter novel and, as Rowling noted, it "seemed too late"
+        to introduce the character after all of that. Rowling confirmed in a 2004 interview that Hermione is an only
+        child.</p>
+
+      <h2 id="p6">Ron Weasley</h2>
+
+      <figure>
+        <img src="assets/ron.jpg" alt="Ron Weasley">
+        <figcaption>Ron Weasley</figcaption>
+      </figure>
+
+      <p>According to Rowling, Ron was among the characters she created "the very first day." Ron is inspired by
+        Rowling's best friend Sean Harris (to whom Harry Potter and the Chamber of Secrets is dedicated), but she has
+        clearly stated that she "never set out to describe Sean in Ron, but Ron has a Sean-ish turn of phrase." Like
+        Harris is to Rowling, Ron is "always there" when Harry needs him. Ron fits many of the stereotypes expected of
+        the sidekick; he is often used as comic relief, is loyal to the hero, and lacks much of the talent Harry
+        possesses, at least, early on, in terms of magical power. However, he proves his bravery and magical ability
+        several times, such as by playing 'real wizard's chess' in the first book, entering into the Forbidden Forest
+        with Harry during the second book despite his arachnophobia, producing a full-corpreal Patronus Charm in the
+        fifth book and even, in the seventh book, getting basilisk fangs from the Chamber of Secrets by mimicking
+        Parseltongue without understanding it.</p>
+
+      <!-- Se añade un botón para volver al inicio del artículo -->
+      <a href="#top">
+        <button id="back">Back to top</button>
+      </a>
+    </article>
+
+    <!-- Se ubica el pie de página para dar información sobre el autor, el curso y el año -->
+    <footer>
+      &copy; Juan Camilo Cárdenas Gómez — Gráfica interactiva — 2021
+    </footer>
+
+    <!-- Se añade un botón para ir a la siguiente página dentro del flujo narrativo del sitio -->
+    <a href="activity.html"><button id="next">→</button></a>
+  </div>
+</body>
+
+</html>
