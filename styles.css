@@ -33,6 +33,8 @@
 body {
   margin: 0;
   height: 100vh;
+  max-width: 100vw;
+  overflow: hidden;
 }
 
 /* Configuración de la barra de navegación, se añaden sombras y se le da un color de fondo oscuro*/
@@ -42,7 +44,6 @@ header {
   box-shadow: var(--shadow);
   background-color: var(--dark);
   justify-content: space-between;
-  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 /* Cambiar el estilo general de los botones */
@@ -198,6 +199,7 @@ section h1 {
 /* Estilos del botón */
 #tour {
   cursor: pointer;
+  max-width: 250px;
   font-weight: 700;
   font-size: 1.5rem;
   color: var(--dark);
@@ -348,10 +350,58 @@ figcaption {
   background-color: var(--dark);
 }
 
+.hamburger {
+  display: none;
+}
 
-@media (max-width: 1050px) {
-  body {
-    overflow-x: hidden;
+label {
+  height: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin-right: 5vw;
+}
+
+label span,
+label span::before,
+label span::after {
+  display: none;
+  background: var(--yellow);
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+label span::before,
+label span::after {
+  content: "";
+  position: absolute;
+}
+
+label span::before {
+  bottom: 7px;
+}
+
+label span::after {
+  top: 7px;
+}
+
+/* Pantallas tablet */
+@media only screen and (max-width: 1200px) {
+  /* Cambiar la diagramación para que toda la información esté en una sola columna */
+  .grid {
+    grid-template-columns: 100vw;
+    grid-template-rows: 10vh 87vh 3vh;
+    grid-template-areas: "header" "article" "footer";
+  }
+
+  header {
+    padding: 0 4vw;
+  }
+
+  section {
+    background-size: 150vh !important;
   }
 
   header img {
@@ -359,11 +409,52 @@ figcaption {
   }
 
   nav {
-    display: none;
+    width: 0;
+    top: 10vh;
+    left: 100vw;
+    max-height: 87vh;
+    position: absolute;
+    transform: scale(1, 1);
+    transition: all 400ms ease;
+    background-color: var(--dark);
   }
 
-  header {
-    padding: 1vw;
+  label span,
+  label span::before,
+  label span::after {
+    display: block;
+    transition: all 400ms ease-in-out;
+  }
+
+  /* Menú con ícono de hamburguesa */
+  .hamburger:checked ~ label span{
+    transform: rotate(30deg);
+  }
+
+  .hamburger:checked ~ label span::after,
+  .hamburger:checked ~ label span::before {
+    transform: rotate(25deg);
+  }
+
+  .hamburger:checked ~ nav {
+    left: 20vw;
+    z-index: 1;
+    width: 80vw;
+    display: flex;
+    opacity: 0.98;
+    transform: scale(1, 1);
+  }
+
+  nav ul {
+    height: 70%;
+    width: 100%;
+    display: grid;
+    place-items: center;
+  }
+
+  nav a,
+  nav button {
+    font-size: 2rem;
   }
 
   header button {
@@ -371,17 +462,16 @@ figcaption {
     background-color: transparent;
   }
 
-  .grid {
-    grid-template-columns: 100vw;
-    grid-template-rows: 10vh 85vh 5vh;
-    grid-template-areas: 'header' 'article' 'footer';
+  header button:hover {
+    color: var(--yellow);
+    background-color: transparent;
   }
 
   #next {
     position: absolute;
-    height: 86vh;
+    height: 87vh;
     background-color: var(--dark);
-    top: 9vh;
+    top: 10vh;
     left: 90vw;
     width: 10vw;
     font-size: 100;
@@ -390,7 +480,8 @@ figcaption {
   }
 
   #next:hover {
-    height: 86vh;
+    top: 10vh;
+    height: 87vh;
   }
 
   #back {
@@ -398,9 +489,8 @@ figcaption {
   }
 
   section h1 {
-    padding: 0;
+    padding: 0 5vw;
     margin: 0;
-    font-size: 3rem;
   }
 
   section button {
@@ -414,5 +504,16 @@ figcaption {
 
   figure img {
     max-width: 80vw;
+  }
+}
+
+/* Pantalla Celular */
+@media only screen and (max-width: 800px) {
+  section {
+    background-size: 200vw !important;
+  }
+
+  #tour {
+    font-size: 1rem;
   }
 }
