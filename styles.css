@@ -3,8 +3,8 @@
 /* Inicialización */
 
 /* Importar la fuente Poppins de Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@namespace prefix "https://juaccardenasgom.github.io/grafica-interactiva/";
 /* Variables para la paleta de colores, fuente y otros estilos de botones y sombras */
 :root {
   --purple: #581eaf;
@@ -13,7 +13,7 @@
   --yellow: #f0d06b;
   --dark: #1e2019;
   --lightdark: #2b2e24;
-  --font: 'Poppins', sans-serif;
+  --font: "Poppins", sans-serif;
   --button-radius: 0.5rem;
   --shadow: 0 0 #000, 0 0 #000, 0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -64,9 +64,9 @@ button {
   grid-template-rows: 8vh 90vh 2vh;
   grid-template-columns: 15vw 85vw;
   grid-template-areas:
-    'header header'
-    'sidebar article'
-    'footer footer';
+    "header header"
+    "sidebar article"
+    "footer footer";
 }
 
 /* Ubicación del header en el grid */
@@ -186,7 +186,7 @@ section {
   background-repeat: no-repeat;
   background-position: center;
   background-blend-mode: screen;
-  background-image: url(/assets/hogwarts.jpg),
+  background-image: url(assets/hogwarts.jpg),
     radial-gradient(black, var(--purple));
 }
 
@@ -346,4 +346,73 @@ figcaption {
   height: 91vh;
   color: white;
   background-color: var(--dark);
+}
+
+
+@media (max-width: 1050px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  header img {
+    max-width: 50vw;
+  }
+
+  nav {
+    display: none;
+  }
+
+  header {
+    padding: 1vw;
+  }
+
+  header button {
+    color: white;
+    background-color: transparent;
+  }
+
+  .grid {
+    grid-template-columns: 100vw;
+    grid-template-rows: 10vh 85vh 5vh;
+    grid-template-areas: 'header' 'article' 'footer';
+  }
+
+  #next {
+    position: absolute;
+    height: 86vh;
+    background-color: var(--dark);
+    top: 9vh;
+    left: 90vw;
+    width: 10vw;
+    font-size: 100;
+    color: white;
+    padding: 0;
+  }
+
+  #next:hover {
+    height: 86vh;
+  }
+
+  #back {
+    display: none;
+  }
+
+  section h1 {
+    padding: 0;
+    margin: 0;
+    font-size: 3rem;
+  }
+
+  section button {
+    font-size: 1rem;
+    width: 60vw;
+  }
+
+  section {
+    background-size: auto 100%;
+  }
+
+  figure img {
+    max-width: 80vw;
+  }
 }
