@@ -29,9 +29,16 @@
   font-family: var(--font);
 }
 
+html {
+  margin: 0;
+  padding: 0;
+}
+
 /* Configuración inicial del body que ocupe todo el alto de la pantalla */
 body {
   margin: 0;
+  padding: 0;
+
   height: 100vh;
   max-width: 100vw;
   overflow: hidden;
@@ -387,6 +394,22 @@ label span::after {
   top: 7px;
 }
 
+/* Estilos para el mapa interactivo */
+main {
+  grid-area: sidebar;
+  position: relative;
+  padding: 10px;
+
+  width: 96vw;
+  height: 100%;
+  margin: 0 auto;
+}
+
+canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
 /* Pantallas tablet */
 @media only screen and (max-width: 1200px) {
   /* Cambiar la diagramación para que toda la información esté en una sola columna */
@@ -398,6 +421,12 @@ label span::after {
 
   header {
     padding: 0 4vw;
+  }
+
+  main {
+    grid-area: article;
+    padding: 0;
+    margin: 0;
   }
 
   section {
@@ -427,7 +456,7 @@ label span::after {
   }
 
   /* Menú con ícono de hamburguesa */
-  .hamburger:checked ~ label span{
+  .hamburger:checked ~ label span {
     transform: rotate(30deg);
   }
 
@@ -516,4 +545,43 @@ label span::after {
   #tour {
     font-size: 1rem;
   }
+
+  main {
+    grid-area: article;
+    padding: 0;
+    margin: 0;
+    width: 90vw;
+  }
+
+  canvas {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  nav {
+    display: none;
+  }
+}
+
+canvas {
+  cursor: none;
+}
+
+#sitemap {
+  list-style-type: none;
+  display: flex;
+  font-size: small;
+  font-weight: bold;
+  margin: 2rem;
+}
+
+#sitemap li {
+  margin: 0 0.25rem;
+}
+
+#sitemap li ul {
+  font-weight: 500;
+  line-height: 1rem;
+  list-style-type: none;
+  padding-left: 0.5rem;
 }
